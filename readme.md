@@ -20,9 +20,6 @@ undefined reference to `_imp__xmlFree'
 ```
 
 You need to pass `-DIN_LIBXML` when compiling your client. See this [comment](https://github.com/GNOME/libxml2/blob/master/include/libxml/xmlexports.h#L111-L115).
-
-
-
 Example `Makevars.win` file:
 
 ```Make
