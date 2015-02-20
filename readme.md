@@ -13,13 +13,13 @@ CFLAGS="-m64" ./configure
 make 
 ```
 
-**Important** if you are getting this error:
+**Important:** Some versions of mingw give this error when linking the static library:
 
 ```
 undefined reference to `_imp__xmlFree'
 ```
 
-You need to pass `-DIN_LIBXML` when compiling your client. See this [comment](https://github.com/GNOME/libxml2/blob/v2.9.2/include/libxml/xmlexports.h#L111-L115).
+To fix this, you need to pass `-DIN_LIBXML` when compiling your **client**. See this [comment](https://github.com/GNOME/libxml2/blob/v2.9.2/include/libxml/xmlexports.h#L111-L115).
 Example `Makevars.win` file:
 
 ```Make
